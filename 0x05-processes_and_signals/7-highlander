@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# It displays to infinity and beyond indefinitely
+m=1
+
+trigger_sigterm() {
+	echo "I am invincible!!!";
+}
+
+trap "trigger_sigterm" SIGTERM
+
+while ((m))
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
