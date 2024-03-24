@@ -1,0 +1,21 @@
+https://imgur.com/a/i29l8Ss
+
+- Server: A server is a computer or a program that provides functionality for other programs or devices, called clients or users.
+
+- The domain name (www.foobar.com) is a human-readable address that maps to the server's IP address (8.8.8.8). It allowsusers to access the website using a memorable name instead of an IP address.
+
+- The www in www.foobar.com is a subdomain and is typically configured as a CNAME (Canonical Name) record, pointing to the main domain (foobar.com) or directly to the server's IP address.
+
+- The web server (Nginx) handles incoming HTTP requests from clients (browsers) and forwards dynamic requests to the application server for processing.
+
+- The application server communicates with the database to fetch or store data.
+
+- The database stores and manages the website's data, such as user information, content, and settings.
+
+- When a user requests a webpage, the server sends the requested content back to the user's browser over HTTP.
+
+- Single Point of Failure - Since all components are hosted on a single server, any failure in the server hardware or software can lead to downtime for the entire website.
+
+- Performing maintenance tasks such as deploying new code or updating server software may require restarting the web server, resulting in downtime for the website.
+
+- Scaling up the infrastructure to accommodate more traffic would require significant changes and may not be feasible without downtime.
