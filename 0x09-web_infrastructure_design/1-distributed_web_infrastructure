@@ -1,0 +1,13 @@
+https://imgur.com/a/ERyPL29
+
+1. For every additional element, why you are adding it:
+   - Ensure each addition aligns with system objectives, such as scalability or redundancy, optimizing functionality.
+
+2. Distribution algorithm your load balancer is configured with and how it works:
+   - Load balancer distributes requests among servers using algorithms like Round Robin or Least Connections, optimizing resource utilization.
+
+3. Load-balancer enabling an Active-Active or Active-Passive setup, explain the difference between both:
+   - Active-Active utilizes all servers simultaneously, enhancing scalability, while Active-Passive designates one active server, providing redundancy with backups.
+
+4. How a database Primary-Replica (Master-Slave) cluster works:
+   - Primary node handles write operations and maintains data integrity, while replica nodes serve read queries and provide redundancy.
