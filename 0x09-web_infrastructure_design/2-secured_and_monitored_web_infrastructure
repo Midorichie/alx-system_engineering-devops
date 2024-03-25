@@ -1,0 +1,16 @@
+https://imgur.com/a/nkjLaHP
+
+1. For every additional element, why you are adding it:
+   - Additional elements are added to meet specific requirements such as increased capacity, redundancy, or improved performance.
+
+2. What are firewalls for:
+   - Firewalls are designed to control and filter network traffic, enforcing security policies to protect against unauthorized access and threats.
+
+3. Why is the traffic served over HTTPS:
+   - Traffic is served over HTTPS to ensure secure communication by encrypting data exchanged between the client and server, mitigating the risk of interception and unauthorized access.
+
+4. What monitoring is used for:
+   - Monitoring is used to track and analyze system performance, detect anomalies, ensure availability, and troubleshoot issues to maintain optimal operation.
+
+5. How the monitoring tool is collecting data:
+   - The monitoring tool collects data by periodically querying system metrics, logs, and performance indicators from servers, applications, and network devices, aggregating information for analysis and reporting.
