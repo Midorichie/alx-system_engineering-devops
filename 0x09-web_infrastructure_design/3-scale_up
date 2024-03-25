@@ -1,0 +1,11 @@
+https://imgur.com/a/yE6DbDB
+
+- Web Server: The web server (e.g., Nginx, Apache) is added to handle HTTP requests, serving static content, and potentially performing SSL termination. It's responsible for efficiently delivering web pages, images, and other assets to clients.
+
+- Application Server: The application server (e.g., Tomcat, Node.js) is added to handle dynamic content generation, business logic execution, and processing requests that require server-side computation. It's responsible for running the application code and generating dynamic responses.
+
+- Database Server: The database server (e.g., MySQL, PostgreSQL) is added to store and manage application data. It's responsible for handling database queries, ensuring data integrity, and providing persistent storage for the application.
+
+- Load Balancer (HAproxy): The load balancer is added to distribute incoming traffic across multiple web and application servers, improving scalability, availability, and reliability. It helps prevent overload on any single server, ensures efficient resource utilization, and enables seamless failover in case of server failures.
+
+- Server: Each additional server is added to scale out the infrastructure horizontally, distributing the workload and reducing the risk of single points of failure. Separating components onto dedicated servers allows for better resource isolation, performance optimization, and easier management of each component.
