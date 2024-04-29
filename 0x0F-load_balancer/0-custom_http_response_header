@@ -10,10 +10,10 @@ echo -e "Updating and doing some minor checks...\n"
 function install() {
 	command -v "$1" &> /dev/null
 
-	#shellcheck disable-SC2181
+	#shellcheck disable=SC2181
 	if [ $? -ne 0 ]; then
 		echo -e "	Installing: $1$\n"
-		sudo apt-get updaye -y -qq && \
+		sudo apt-get update -y -qq && \
 			sudo apt-get install -y "$1" -qq
 		echo -e "\n"
 	else
@@ -25,10 +25,10 @@ install nginx #install nginx
 
 echo -e "\nSetting up some minor stuff.\n"
 
-#allowing nginx on firewall
+# allowing nginx on firewall
 sudo ufw allow 'Nginx HTTP'
 
-#Give the user ownership to website files for easy editing
+# Give the user ownership to website files for easy editing
 if [ -d "/var/www" ]; then
 	sudo chown -R "$USER":"$USER" /var/www
 	sudo chmod -R 755 /var/www
@@ -46,7 +46,7 @@ for dir in /var/www/{html,error}; do
 done
 
 # creating new index
-echo "Hello world" > /var/www/html/index.html
+echo "Hello World!" > /var/www/html/index.html
 
 # create new error page
 echo "Ceci n'est pas une page" > /var/www/html/error_404.html
@@ -56,7 +56,7 @@ sudo cp /etc/nginx/sites-enabled/default nginx-sites-enabled_default.backup
 
 server_config=\
 "server {
-		listen 80 default server;
+		listen 80 default_server;
 		listen [::]:80 default_server;
 		root /var/www/html;
 		index index.html index.htm index.nginx-debian.html
@@ -66,7 +66,7 @@ server_config=\
 			try_files \$uri \$uri/ =404;
 		}
 		if (\$request_filename ~ redirect_me){
-			rewrite ^ https://th3-grrot.tk/ permanent;
+			rewrite ^ https://th3-gr00t.tk/ permanent;
 		}
 		error_page 404 /error_404.html;
 		location = /error_404.html {
@@ -77,7 +77,7 @@ server_config=\
 #shellcheck disable=SC2154
 echo "$server_config" | sudo dd status=none of=/etc/nginx/sites-enabled/default
 
-if [ "$(pgrep -c nginx)" -le 0]; then
+if [ "$(pgrep -c nginx)" -le 0 ]; then
 	sudo service nginx start
 else
 	sudo service nginx restart
