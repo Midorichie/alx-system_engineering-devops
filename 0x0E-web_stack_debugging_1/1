@@ -1,4 +1,4 @@
 rm: cannot remove '/etc/nginx/sites-enabled/default': Permission denied
-./0-nginx_likes_port_80: line 7: In: command not found
+ln: failed to create symbolic link '/etc/nginx/sites-enabled/default': File exists
 Failed to restart nginx.service: Interactive authentication required.
 See system logs and 'systemctl status nginx.service' for details.
